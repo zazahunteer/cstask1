@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background">#F7F5EF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="ink">#163F3A</color>
+    <color name="muted">#526B64</color>
+    <color name="teal">#185B50</color>
+    <color name="teal_dark">#10473E</color>
+    <color name="gold">#F3C975</color>
+    <color name="border">#B8C9C1</color>
+    <color name="error">#A72B29</color>
+</resources>
