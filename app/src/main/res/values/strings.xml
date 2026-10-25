@@ -4,4 +4,19 @@
     <string name="tagline">קצת סדר. יותר ריכוז.</string>
     <string name="logo_description">הסמל של Focus: מחברת עם סימן וי</string>
     <string name="login_title">טוב שחזרתם</string>
+    <string name="login_subtitle">נכנסים ומתחילים להתרכז.</string>
+    <string name="register_title">מתחילים כאן</string>
+    <string name="username">שם משתמש</string>
+    <string name="password">סיסמה</string>
+    <string name="username_hint">הקלידו שם משתמש</string>
+    <string name="password_hint">הקלידו סיסמה</string>
+    <string name="login_button">כניסה</string>
+    <string name="register_link">עדיין אין חשבון? נרשמים כאן</string>
+    <string name="username_required">יש להזין שם משתמש</string>
+    <string name="password_required">יש להזין סיסמה</string>
+    <string name="fill_required_fields">יש למלא את השדות החסרים</string>
+    <string name="register_first">אין עדיין משתמש רשום. עברו למסך ההרשמה.</string>
+    <string name="wrong_credentials">שם המשתמש או הסיסמה שגויים</string>
+    <string name="registration_success">ההרשמה הצליחה. אפשר להיכנס עם הסיסמה שבחרתם.</string>
+    <string name="login_success">הכניסה הצליחה. שלום, %1$s!</string>
 </resources>
