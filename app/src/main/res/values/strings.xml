@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Focus</string>
+    <string name="app_name">cstask1</string>
     <string name="tagline">קצת סדר. יותר ריכוז.</string>
     <string name="logo_description">הסמל של Focus: מחברת עם סימן וי</string>
     <string name="login_title">טוב שחזרתם</string>
