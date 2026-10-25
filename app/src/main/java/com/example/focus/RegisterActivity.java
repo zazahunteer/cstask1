@@ -79,7 +79,6 @@ public class RegisterActivity extends Activity {
             return;
         }
 
-        // חוזרים למסך הכניסה הקיים ומעבירים אליו את הפרטים.
         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         intent.putExtra(LoginActivity.EXTRA_USERNAME, username);
         intent.putExtra(LoginActivity.EXTRA_PASSWORD, password);

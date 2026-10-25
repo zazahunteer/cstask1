@@ -99,7 +99,6 @@ public class LoginActivity extends Activity {
             return;
         }
 
-        // equals משווה את התוכן של המחרוזות.
         if (registeredUsername.equals(username) && registeredPassword.equals(password)) {
             showMessage(getString(R.string.login_success, registeredUsername), true);
         } else {

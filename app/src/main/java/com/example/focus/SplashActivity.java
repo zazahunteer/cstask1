@@ -24,7 +24,6 @@ public class SplashActivity extends Activity {
         Animation logoAnimation = AnimationUtils.loadAnimation(this, R.anim.logo_animation);
         logoImage.startAnimation(logoAnimation);
 
-        // ההמתנה רצה ברקע כדי שהאנימציה לא תיעצר.
         splashThread = new Thread(new Runnable() {
             @Override
             public void run() {
