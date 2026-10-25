@@ -28,6 +28,7 @@ public class SplashActivity extends Activity {
         splashThread = new Thread(new Runnable() {
             @Override
             public void run() {
+                final Thread currentThread = Thread.currentThread();
                 try {
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
@@ -37,7 +38,7 @@ public class SplashActivity extends Activity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        if (splashThread == null || isFinishing() || isDestroyed()) {
+                        if (splashThread != currentThread || isFinishing() || isDestroyed()) {
                             return;
                         }
                         Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
