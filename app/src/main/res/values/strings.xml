@@ -19,4 +19,13 @@
     <string name="wrong_credentials">שם המשתמש או הסיסמה שגויים</string>
     <string name="registration_success">ההרשמה הצליחה. אפשר להיכנס עם הסיסמה שבחרתם.</string>
     <string name="login_success">הכניסה הצליחה. שלום, %1$s!</string>
+    <string name="register_subtitle">בוחרים שם משתמש וסיסמה.</string>
+    <string name="confirm_password">אימות סיסמה</string>
+    <string name="new_password_hint">לפחות 6 תווים</string>
+    <string name="confirm_password_hint">הקלידו שוב את הסיסמה</string>
+    <string name="register_button">הרשמה</string>
+    <string name="login_link">כבר יש חשבון? חוזרים לכניסה</string>
+    <string name="password_too_short">הסיסמה חייבת להכיל לפחות 6 תווים</string>
+    <string name="confirm_password_required">יש להזין את הסיסמה שוב</string>
+    <string name="passwords_do_not_match">הסיסמאות אינן זהות</string>
 </resources>
