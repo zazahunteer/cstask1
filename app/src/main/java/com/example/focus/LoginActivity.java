@@ -7,12 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class LoginActivity extends Activity {
 
     public static final String EXTRA_USERNAME = "com.example.focus.USERNAME";
     public static final String EXTRA_PASSWORD = "com.example.focus.PASSWORD";
+    private static final int REGISTER_REQUEST = 1;
 
     private EditText usernameInput;
     private EditText passwordInput;
@@ -31,7 +31,10 @@ public class LoginActivity extends Activity {
         Button loginButton = findViewById(R.id.loginButton);
         TextView registerLink = findViewById(R.id.registerLink);
 
-        readRegistration();
+        if (savedInstanceState != null) {
+            registeredUsername = savedInstanceState.getString(EXTRA_USERNAME);
+            registeredPassword = savedInstanceState.getString(EXTRA_PASSWORD);
+        }
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,21 +47,27 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
+                startActivityForResult(intent, REGISTER_REQUEST);
             }
         });
     }
 
     @Override
-    protected void onNewIntent(Intent intent) {
-        super.onNewIntent(intent);
-        setIntent(intent);
-        readRegistration();
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(EXTRA_USERNAME, registeredUsername);
+        outState.putString(EXTRA_PASSWORD, registeredPassword);
     }
 
-    private void readRegistration() {
-        registeredUsername = getIntent().getStringExtra(EXTRA_USERNAME);
-        registeredPassword = getIntent().getStringExtra(EXTRA_PASSWORD);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode != REGISTER_REQUEST || resultCode != RESULT_OK || data == null) {
+            return;
+        }
+
+        registeredUsername = data.getStringExtra(EXTRA_USERNAME);
+        registeredPassword = data.getStringExtra(EXTRA_PASSWORD);
 
         if (registeredUsername != null && registeredPassword != null) {
             usernameInput.setText(registeredUsername);
@@ -102,7 +111,6 @@ public class LoginActivity extends Activity {
         if (registeredUsername.equals(username) && registeredPassword.equals(password)) {
             showMessage(getString(R.string.login_success, registeredUsername), true);
         } else {
-            passwordInput.setError(getString(R.string.wrong_credentials));
             showMessage(getString(R.string.wrong_credentials), false);
         }
     }
@@ -111,6 +119,5 @@ public class LoginActivity extends Activity {
         statusText.setText(message);
         statusText.setTextColor(getColor(success ? R.color.teal : R.color.error));
         statusText.setVisibility(View.VISIBLE);
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

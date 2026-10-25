@@ -79,11 +79,10 @@ public class RegisterActivity extends Activity {
             return;
         }
 
-        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+        Intent intent = new Intent();
         intent.putExtra(LoginActivity.EXTRA_USERNAME, username);
         intent.putExtra(LoginActivity.EXTRA_PASSWORD, password);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivity(intent);
+        setResult(RESULT_OK, intent);
         finish();
     }
 }
