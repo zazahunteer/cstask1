@@ -19,20 +19,6 @@
 
 הגדרות הבנייה: JDK 17, Gradle 8.9, Android Gradle Plugin 8.7.3, compile SDK 35, Build Tools 35.0.0 ו-target SDK 34.
 
-## צילומי מסך
-
-### פתיחה
-
-![מסך פתיחה](screenshots/splash.png)
-
-### כניסה
-
-![מסך כניסה](screenshots/login.png)
-
-### הרשמה
-
-![מסך הרשמה](screenshots/register.png)
-
 ## פרסום ב-GitHub
 
 הפרויקט כבר כולל היסטוריית Git. ב-Android Studio בוחרים `Git → GitHub → Share Project on GitHub`, מתחברים לחשבון האישי ומפרסמים את המאגר כ-Public. לאחר הפרסום בודקים שהקישור נפתח גם בחלון גלישה פרטית.
